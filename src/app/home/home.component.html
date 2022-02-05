@@ -1,0 +1,27 @@
+<div class="alert alert-primary">
+    <p>{{title}}</p>
+    <button class="btn btn-success" (click)="changeTitle()">Click Me</button>
+</div>
+<div class="alert alert-primary">
+    <p>{{number}}</p>
+    <button class="btn m-1 btn-success" (click)="changeNumber()">+</button>
+    <button class="btn m-1 btn-secondary" (click)="changeNumberRest()">Rest</button>
+    <button class="btn m-1 btn-success" (click)="changeNumber2()">-</button>
+</div>
+<a target="_blank" href="{{link}}">Google</a>
+<div class="alert alert-primary">
+    <a class="{{cssClass}}" *ngFor="let i of names">{{i}}</a>
+    <br>
+    <button class="btn m-1 btn-success" (click)="addName()">Refresh Names</button>
+    <button class="btn m-1 btn-success" (click)="changeNumber()">+</button>
+</div>
+<div class="alert alert-primary">
+    {{school}}
+    <select [(ngModel)]="school" name="" id="">
+        <option value="">aaaaaaa</option>
+        <option value="">bbbbbbb</option>
+        <option value="">ccccccc</option>
+        <option value="">ddddddd</option>
+        <option value="">eeeeeee</option>
+    </select>
+</div>

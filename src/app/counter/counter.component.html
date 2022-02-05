@@ -1,0 +1,58 @@
+<div class="container">
+    <button class="btn btn-primary m-1" (click)="changeAddress()">Add</button>
+    <input type="text" [(ngModel)]="address">
+    <br><br>
+    <ul class="list-group">
+        <li class="list-group-item" *ngFor="let item of addresses">{{item}}</li>
+    </ul>
+</div>
+<hr>
+<div class="container">
+    <form>
+        <div class="mb-3">
+            <label for="number" class="form-label">SSN</label>
+            <input type="number" placeholder="SSN" name="ssn" [(ngModel)]="ssn" class="form-control" id="number">
+        </div>
+        <div class="mb-3">
+            <label for="name`" class="form-label">Name</label>
+            <input type="text" placeholder="Name" name="name" [(ngModel)]="name" class="form-control" id="name">
+        </div>
+        <div class="mb-3">
+            <label for="address" class="form-label">Address</label>
+            <input type="text" placeholder="Address" name="addressC" [(ngModel)]="addressC" class="form-control"
+                id="address">
+        </div>
+        <div class="mb-3">
+            <label for="age" class="form-label">Age</label>
+            <input type="number" placeholder="Age" name="age" [(ngModel)]="age" class="form-control" id="age">
+        </div>
+        <div class="mb-3 form-check">
+            <input type="checkbox" (click)="gender()" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Gender</label>
+        </div>
+        <button type="submit" (click)="getItems()" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+<br>
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr class="table-secondary">
+                <th scope="col">SSN</th>
+                <th scope="col">Name</th>
+                <th scope="col">Address</th>
+                <th scope="col">Age</th>
+                <th scope="col">Gender</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of customars">
+                <th scope="row">{{item.ssn}}</th>
+                <td>{{item.name}}</td>
+                <td>{{item.addressC}}</td>
+                <td>{{item.age}}</td>
+                <td>{{item.gender}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

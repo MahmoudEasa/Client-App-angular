@@ -1,0 +1,56 @@
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">SSN</th>
+                <th scope="col">Name</th>
+                <th scope="col">Age</th>
+                <th scope="col">Gender</th>
+            </tr>
+        </thead>
+        <tbody *ngIf="toggle">
+            <tr *ngFor="let x of custumers">
+                <th scope="row">{{x.ssn}}</th>
+                <td>{{x.name}}</td>
+                <td>{{x.age}}</td>
+                <td>{{x.gender}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <button type="button" class="btn btn-success m-1" (click)="addCustumer()">Add</button>
+    <button type="button" class="btn btn-success m-1" (click)="getData()">{{text}}</button>
+</div>
+<br>
+<!-- Task -->
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Age</th>
+                <th scope="col">Children</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody *ngIf="task">
+            <tr *ngFor="let item of customersTask">
+                <th scope="row">{{item.id}}</th>
+                <td>{{item.name}}</td>
+                <td>{{item.age}}</td>
+                <td>
+                    <ul>
+                        <li *ngFor="let x of item.children">{{x}}</li>
+                    </ul>
+                </td>
+                <td>
+                    <button class="btn btn-primary">{{edit}}</button>
+                    <button class="btn btn-danger">{{delete}}</button>
+                    <button class="btn btn-secondary">{{view}}</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <button type="button" class="btn btn-success m-1" (click)="getDataTask()">{{textTask}}</button>
+</div>
